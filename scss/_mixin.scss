@@ -1,0 +1,58 @@
+$lighten10: lighten($themColor, 10);
+
+// 顶部导航条设置
+$header_hei: 0.98rem;
+$header_bg: transparent;
+// $header_img: '../img/header_bg_line.jpg';
+$header_color: #fff;
+$header_iconColor: $lighten10;
+
+// ‘我的优惠券’优惠券选项卡相关
+$tabDefaultColor: #a8a8a8;
+
+// 用户信息提交表单相关
+$form_btn_color: #fff;
+$form_input_border_color: darken($themColor, 20%);
+
+// 背景图片设置
+@mixin bgimg($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+// 圆角边框
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// 定位上下居中
+@mixin ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// 定位左右居中
+@mixin cl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// 清除浮动
+.clearfix:after,
+.clear:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.cleafix,
+.clear{
+  zoom:1;
+}

@@ -1,0 +1,12 @@
+// iconfont 图标设置
+// 通过此配置可以不用额外添加类 '.iconfont'
+[class*=" icon-"], 
+[class^=icon-],
+[class*=" cicon-"], 
+[class^=cicon-] {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

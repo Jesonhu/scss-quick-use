@@ -1,0 +1,96 @@
+/* 移动端1px像素处理[A0021] */
+$borderColor: #E5E5E5;
+
+.one-px,
+.one-px-t,
+.one-px-b,
+.one-px-tb,
+.one-px-l,
+.one-px-r {
+  position: relative;
+}
+.one-px:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  height: 1px;
+  border: 1px solid $borderColor;
+  color: $borderColor;
+  height: 200%;
+  transform-origin: left top;
+  transform: scale(0.5);
+}
+.one-px-t:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid $borderColor;
+  color: $borderColor;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+.one-px-b:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid $borderColor;
+  color: $borderColor;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+.one-px-tb:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid $borderColor;
+  color: $borderColor;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+.one-px-tb:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid $borderColor;
+  color: $borderColor;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+.one-px-l:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid $borderColor;
+  color: $borderColor;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+}
+.one-px-r:after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-right: 1px solid $borderColor;
+  color: $borderColor;
+  transform-origin: 100% 0;
+  transform: scaleX(0.5);
+}
